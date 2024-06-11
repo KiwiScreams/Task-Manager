@@ -1,1 +1,66 @@
-<p>dashboard-projects works!</p>
+<div class="row">
+    <div class="col-12 text-end">
+        <button class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#myModal"><i class="fa-solid fa-plus"></i></button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3" *ngFor="let project of list_of_project">
+        <div class="card">
+            <div class="card-header bg-success">
+                {{project.abbreviation}}
+            </div>
+            <div class="card-body">
+                <div class="col-6">
+                    {{project.name}}
+                </div>
+                <div class="col-6">
+                    {{project.description}}
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6">
+                        <button class="btn btn-success btn-sm">Edit<i class="fa-solid fa-pen-to-square"></i></button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-danger btn-sm">Delete<i class="fa-solid fa-delete-left"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content"> 
+        <div class="modal-header">
+          <h4 class="modal-title">New Project</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div> 
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-3">
+                <label for="">Abbr</label>
+                <input type="text" name="shortName" class="form-control" [(ngModel)]="element_of_project.abbreviation">
+            </div>
+            <div class="col-5">
+                <label for="">Full  Name</label>
+                <input type="text" name="projectName" class="form-control" [(ngModel)]="element_of_project.name">
+            </div>
+            <div class="col-12">
+                <label for="">Description</label>
+                <input type="text" name="projectDescription" class="form-control" [(ngModel)]="element_of_project.description">
+            </div>
+            <div class="col-12">
+                <label for="">Color</label>
+                <input type="color" name="projectColor" class="form-control" [(ngModel)]="element_of_project.color">
+            </div>
+          </div>
+        </div> 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="IsSaving()">Save</button>
+        </div> 
+      </div>
+    </div>
+  </div>

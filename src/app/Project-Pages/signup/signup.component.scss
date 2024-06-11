@@ -1,0 +1,53 @@
+.container {
+    margin: 50px auto;
+    width: 60%;
+    background-color: #00000076;
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    padding: 20px 30px;
+    h2
+    {
+        font-size: 42px;
+        color: #fff;
+        text-align: center;
+    }
+    form {
+        width: 120%;
+        .btn-primary {
+            width: 100%;
+            margin-top: 20px;
+        }
+label
+
+{
+    color: #fff;
+}
+        .password-box {
+            position: relative;
+
+            i {
+                position: absolute;
+                right: -12px;
+                top: 0px;
+                font-size: 20px;
+                border-radius: 50%;
+                background-color: #0d6efd;
+                padding: 10px;
+            }
+        }
+
+        .hasAccount {
+            span {
+                color: #0088ff;
+                text-decoration: underline;
+
+            }
+        }
+
+        .error {
+            color: red;
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+}
