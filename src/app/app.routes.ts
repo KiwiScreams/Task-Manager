@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 import { HeaderComponent } from './Project-Pages/header/header.component';
-import { DashboardComponent } from './Project-Pages/dashboard/dashboard.component';
 import { DashboardProjectsComponent } from './Project-Pages/dashboard-projects/dashboard-projects.component';
 import { FooterComponent } from './Project-Pages/footer/footer.component';
 import { LoginComponent } from './Project-Pages/login/login.component';
 import { SignupComponent } from './Project-Pages/signup/signup.component';
 import { UserDetailComponent } from './Project-Pages/user-detail/user-detail.component';
+import { ProjectComponent } from './Project-Pages/project/project.component';
 export const routes: Routes =
     [
         {
@@ -30,8 +30,8 @@ export const routes: Routes =
                         component: DashboardProjectsComponent
                     },
                     {
-                        path: 'dashboard',
-                        component: DashboardComponent
+                        path: 'task',
+                        component: ProjectComponent
                     }
                 ]
         },

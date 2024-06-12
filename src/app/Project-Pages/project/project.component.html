@@ -1,0 +1,10 @@
+<div class="item" [ngClass]="{
+    'easy': item?.complexity === 'Easy',
+    'medium': item?.complexity === 'Medium',
+    'hard': item?.complexity === 'Hard'
+    }">
+    <h3 [ngClass]="{'done': item?.status === 'Done'}">{{item?.name}}</h3>
+    <h5>{{item?.abbr}}</h5>
+    <h6 class="complexity">{{item?.complexity}}</h6>
+    <h6 class="type">{{item?.type}}</h6>
+</div>

@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("user", JSON.stringify(user));
       this.errorMessage = '';
       alert("You have successfully logged in to your account!");
-      this.router.navigateByUrl('header/dashboard');
+      this.router.navigateByUrl('header/dashboard-projects');
     }, (err: any) => {
       this.errorMessage = 'Email or password is invalid';
       console.log(err.error);
